@@ -215,7 +215,7 @@ public class Incomes extends javax.swing.JFrame
 
     private void ShowButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ShowButtonActionPerformed
        
-        String[] Titles = {"Classes", "Semster Price"};
+        String[] Titles = {"Classes", "Semester Price"};
         String[][] ClassesData = new String[UserData.currentUser.Classes.size()][5];
         ClassesData = UserData.currentUser.Classes.toArray(ClassesData);
         
@@ -228,7 +228,7 @@ public class Incomes extends javax.swing.JFrame
       
         UserData.currentUser.Classes.clear();
         
-        String[] Titles = {"Classes", "Semster Price"};
+        String[] Titles = {"Classes", "Semester Price"};
         String[][] ClassesData = new String[UserData.currentUser.Classes.size()][5];
         ClassesData = UserData.currentUser.Classes.toArray(ClassesData);
         

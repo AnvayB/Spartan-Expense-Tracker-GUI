@@ -2,7 +2,11 @@ package SpartanExpenseTracker;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-
+/**
+ * 
+ * @author royperlman
+ *
+ */
 
 public class MyConnection 
 {

@@ -176,7 +176,7 @@ public class HomePage extends javax.swing.JFrame {
 				jEatButton1ActionPerformed(evt);
 			}
 		});
-
+ 
 		jClassesButton.setText("Classes");
 		jClassesButton.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {

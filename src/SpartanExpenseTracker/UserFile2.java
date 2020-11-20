@@ -2,7 +2,10 @@ package SpartanExpenseTracker;
 
 import java.util.*;
 import java.io.File;
-
+/**
+ * 
+ * @author anvaybhanap
+ */
 public class UserFile2 
 {
 
