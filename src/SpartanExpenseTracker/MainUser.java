@@ -1,9 +1,8 @@
 package SpartanExpenseTracker;
 
-import java.util.Scanner;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.lang.*;
+import java.util.Scanner;
 
 /**
  * 

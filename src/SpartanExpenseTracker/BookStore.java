@@ -6,18 +6,10 @@
 package SpartanExpenseTracker;
 
 import java.awt.Color;
-import javax.swing.BorderFactory;
-import javax.swing.border.Border;
-import javax.swing.table.DefaultTableModel;
 
-import java.awt.Color;
 import javax.swing.BorderFactory;
 import javax.swing.border.Border;
 import javax.swing.table.DefaultTableModel;
-import javax.swing.table.DefaultTableModel;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import javax.swing.JButton;
 
 /**
  *

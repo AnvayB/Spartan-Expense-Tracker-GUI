@@ -1,11 +1,9 @@
 package SpartanExpenseTracker;
 
-import java.awt.*;
-import java.awt.event.*;
 import java.awt.Color;
+
 import javax.swing.BorderFactory;
 import javax.swing.border.Border;
-import javax.swing.JOptionPane;
 
 /**
  *

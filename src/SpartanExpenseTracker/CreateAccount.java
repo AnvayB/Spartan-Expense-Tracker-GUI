@@ -3,8 +3,7 @@ package SpartanExpenseTracker;
 
 import java.awt.Color;
 import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.text.SimpleDateFormat;
+
 import javax.swing.BorderFactory;
 import javax.swing.JOptionPane;
 import javax.swing.border.Border;
