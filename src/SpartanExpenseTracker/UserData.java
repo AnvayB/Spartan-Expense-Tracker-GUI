@@ -29,6 +29,12 @@ public class UserData implements Serializable
         public double Balance = 0;
         public double Expence = 0;
         public double Income = 0;
+        public double Carrey_On = 0;
+        public double Salary = 0;
+        public double EatOutTotal = 0;
+        public double BookStoreTotal = 0;
+        public double ClassesTotal = 0;
+        public double OthersTotal = 0;
         
         public ArrayList<String[]> EatOut = new ArrayList<>();
         
@@ -39,13 +45,16 @@ public class UserData implements Serializable
         public ArrayList<String[]> Others = new ArrayList<>();
         
         public ArrayList<String[]> AllTheAbove = new ArrayList<>();
+        
+        public ArrayList<String[]> TotoalIncomes = new ArrayList();
        
         public UserData(String ID, String Password, 
-                String FirstName, String LastName) 
+                String FirstName, String MiddleName, String LastName) 
         {
             this.ID = ID;
             this.Password = Password;
             this.FirstName = FirstName;
+            this.MiddleName = MiddleName;
             this.LastName = LastName;    
         }    
     }

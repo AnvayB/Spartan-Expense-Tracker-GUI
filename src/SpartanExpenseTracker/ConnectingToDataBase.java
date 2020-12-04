@@ -26,11 +26,11 @@ public class ConnectingToDataBase
           try
           {
               connection = DriverManager.getConnection(url, username, password);
-              System.out.println("Connection is Successful");
+              System.out.println("Connection is Sucessfull");
           }
           catch(SQLException ex)
           {
-              System.out.println("Connection is Unsuccessful");
+              System.out.println("Connection is Unsucessfull");
               ex.printStackTrace();
           }
       }

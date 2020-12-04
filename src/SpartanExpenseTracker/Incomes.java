@@ -34,9 +34,14 @@ public class Incomes extends javax.swing.JFrame
         
         Border BackButton =  BorderFactory.createMatteBorder(5,5,5,5, Color.black);
         jPanel3.setBorder(BackButton);   
+        
+        Border CarreyOnjLabel = BorderFactory.createMatteBorder(2,2,2,2, Color.black);
+        CarryOverPanel.setBorder(CarreyOnjLabel);
+        
+        Border SalaryjLabel = BorderFactory.createMatteBorder(2,2,2,2, Color.black);
+        SalaryPanel.setBorder(SalaryjLabel);
     }
 
-    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -49,8 +54,12 @@ public class Incomes extends javax.swing.JFrame
         jPanel4 = new javax.swing.JPanel();
         ShowButton = new javax.swing.JButton();
         RefreshButton = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        ClassesHistoryTable = new javax.swing.JTable();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        CarryOverPanel = new javax.swing.JPanel();
+        CarreyOnjLabel = new javax.swing.JLabel();
+        SalaryPanel = new javax.swing.JPanel();
+        SalaryjLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -67,14 +76,14 @@ public class Incomes extends javax.swing.JFrame
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(24, 24, 24)
+                .addGap(23, 23, 23)
                 .addComponent(ClassesTitle)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
+                .addGap(15, 15, 15)
                 .addComponent(ClassesTitle)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -126,7 +135,7 @@ public class Incomes extends javax.swing.JFrame
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(346, 346, 346)
+                .addGap(273, 273, 273)
                 .addComponent(ShowButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(RefreshButton)
@@ -134,57 +143,103 @@ public class Incomes extends javax.swing.JFrame
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addContainerGap(34, Short.MAX_VALUE)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ShowButton)
                     .addComponent(RefreshButton))
+                .addContainerGap(20, Short.MAX_VALUE))
+        );
+
+        jLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 36)); // NOI18N
+        jLabel1.setText("Carry Over");
+
+        jLabel2.setFont(new java.awt.Font("Lucida Grande", 0, 36)); // NOI18N
+        jLabel2.setText("Salary");
+
+        CarryOverPanel.setBackground(new java.awt.Color(204, 255, 0));
+        CarryOverPanel.setForeground(new java.awt.Color(102, 255, 0));
+
+        CarreyOnjLabel.setFont(new java.awt.Font("Lucida Grande", 0, 36)); // NOI18N
+        CarreyOnjLabel.setText("  ");
+
+        javax.swing.GroupLayout CarryOverPanelLayout = new javax.swing.GroupLayout(CarryOverPanel);
+        CarryOverPanel.setLayout(CarryOverPanelLayout);
+        CarryOverPanelLayout.setHorizontalGroup(
+            CarryOverPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(CarryOverPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(CarreyOnjLabel)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        CarryOverPanelLayout.setVerticalGroup(
+            CarryOverPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CarryOverPanelLayout.createSequentialGroup()
+                .addContainerGap(20, Short.MAX_VALUE)
+                .addComponent(CarreyOnjLabel)
                 .addContainerGap())
         );
 
-        ClassesHistoryTable.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {},
-                {},
-                {},
-                {},
-                {},
-                {}
-            },
-            new String [] {
+        SalaryPanel.setBackground(new java.awt.Color(204, 255, 0));
 
-            }
-        ));
-        jScrollPane1.setViewportView(ClassesHistoryTable);
+        SalaryjLabel.setFont(new java.awt.Font("Lucida Grande", 0, 36)); // NOI18N
+        SalaryjLabel.setText("  ");
+
+        javax.swing.GroupLayout SalaryPanelLayout = new javax.swing.GroupLayout(SalaryPanel);
+        SalaryPanel.setLayout(SalaryPanelLayout);
+        SalaryPanelLayout.setHorizontalGroup(
+            SalaryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(SalaryPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(SalaryjLabel)
+                .addContainerGap(95, Short.MAX_VALUE))
+        );
+        SalaryPanelLayout.setVerticalGroup(
+            SalaryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SalaryPanelLayout.createSequentialGroup()
+                .addContainerGap(20, Short.MAX_VALUE)
+                .addComponent(SalaryjLabel)
+                .addContainerGap())
+        );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(76, 76, 76)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(125, Short.MAX_VALUE))
+                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(34, 34, 34)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addContainerGap())))
-            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(143, 143, 143)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE)
+                            .addComponent(CarryOverPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(30, 30, 30)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(SalaryPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(51, 51, 51)))
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 6, Short.MAX_VALUE))
-                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(28, 28, 28)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(CarryOverPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(SalaryPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 288, Short.MAX_VALUE)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -192,7 +247,9 @@ public class Incomes extends javax.swing.JFrame
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -214,29 +271,37 @@ public class Incomes extends javax.swing.JFrame
     }//GEN-LAST:event_BackButtonActionPerformed
 
     private void ShowButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ShowButtonActionPerformed
+      
+        
+        CarreyOnjLabel.setText("$"+UserData.currentUser.Carrey_On);
+        SalaryjLabel.setText("$"+UserData.currentUser.Salary);
        
-        String[] Titles = {"Classes", "Semester Price"};
-        String[][] ClassesData = new String[UserData.currentUser.Classes.size()][5];
-        ClassesData = UserData.currentUser.Classes.toArray(ClassesData);
-        
-        DefaultTableModel theModel = (DefaultTableModel) ClassesHistoryTable.getModel();
-        
-        theModel.setDataVector(ClassesData, Titles);
     }//GEN-LAST:event_ShowButtonActionPerformed
 
     private void RefreshButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RefreshButtonActionPerformed
       
-        UserData.currentUser.Classes.clear();
         
-        String[] Titles = {"Classes", "Semester Price"};
-        String[][] ClassesData = new String[UserData.currentUser.Classes.size()][5];
-        ClassesData = UserData.currentUser.Classes.toArray(ClassesData);
+        UserData.currentUser.Carrey_On = 0;
+        UserData.currentUser.Salary = 0;
         
-        DefaultTableModel theModel = (DefaultTableModel) ClassesHistoryTable.getModel();
-        
-        theModel.setDataVector(ClassesData, Titles);
+        CarreyOnjLabel.setText("$0.0");
+        SalaryjLabel.setText("$0.0");
         
         DataStorage.SaveData();
+        
+        /*
+        UserData.currentUser.TotoalIncomes.clear();
+        
+        String[] Titles = {"Carray-Over", "Salary"};
+        String[][] Incomes = new String[UserData.currentUser.TotoalIncomes.size()][5];
+        Incomes = UserData.currentUser.TotoalIncomes.toArray(Incomes);
+        
+        DefaultTableModel theModel = (DefaultTableModel) IncomesHistoryTable.getModel();
+        
+        theModel.setDataVector(Incomes, Titles);
+        
+        DataStorage.SaveData();
+        */
     }//GEN-LAST:event_RefreshButtonActionPerformed
 
     /**
@@ -282,14 +347,18 @@ public class Incomes extends javax.swing.JFrame
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BackButton;
-    private javax.swing.JTable ClassesHistoryTable;
+    private javax.swing.JLabel CarreyOnjLabel;
+    private javax.swing.JPanel CarryOverPanel;
     private javax.swing.JLabel ClassesTitle;
     private javax.swing.JButton RefreshButton;
+    private javax.swing.JPanel SalaryPanel;
+    private javax.swing.JLabel SalaryjLabel;
     private javax.swing.JButton ShowButton;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }

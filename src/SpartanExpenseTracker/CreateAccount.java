@@ -474,9 +474,7 @@ public class CreateAccount extends javax.swing.JFrame
             jTextPaneEnterLastName.getText(),jCreatePasswordField1.getText(), jPConfirmPasswordField1.getText()))
         {
             UserData.currentUser = DataStorage.getUser(jTextPaneEnterStudentID.getText());
-            
-            
-            
+
             DataStorage.SaveData();
             
             this.dispose();
@@ -487,7 +485,7 @@ public class CreateAccount extends javax.swing.JFrame
         }
         else
         {
-            JOptionPane.showMessageDialog(null, "Sorry, Invalid entry. This account already existx or form incomplete.");
+            JOptionPane.showMessageDialog(null, "Sorry, Invalid entry. This Account either Exist or Form not Finished.");
         }         
     }//GEN-LAST:event_SubmitButtonActionPerformed
 

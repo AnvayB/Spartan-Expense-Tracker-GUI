@@ -1,12 +1,12 @@
 
 package SpartanExpenseTracker;
 
-import java.io.*;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.HashMap;
-import java.util.Map;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 /**
@@ -15,8 +15,7 @@ import java.util.logging.Logger;
  */
 public class DataStorage 
 {
-    private static final String filename = "UserProfileDataBaseee.txt";
-   // private static final String ExpenseAndIncomeFile = "ExpenseAndIncomeData.txt";
+    private static final String filename = "UserProfileDataBasee.txt";
 
     private static HashMap<String, UserData> users = new HashMap<String, UserData>();
  
@@ -25,12 +24,11 @@ public class DataStorage
         return users.get(StudentID);
     }
     
-    public static boolean StoreUser(String studentId, String firstName, String lastName, String middleName,
+    public static boolean StoreUser(String studentId, String firstName, String middleName, String lastName,
             String createPassword, String confirmPassword ) 
     {
-        //String len = Integer.toString(studentId);
         
-        if(studentId.equals("") || firstName.equals("") || lastName.equals("")  && middleName.equals(" ") &&
+        if(studentId.equals("") || firstName.equals("") &&  middleName.equals(" ") && lastName.equals("") ||
                 createPassword.equals(" ") || confirmPassword.equals(" ") )
         {
             System.out.println("Passing...");
@@ -53,8 +51,7 @@ public class DataStorage
             return false;
         }
         
-        
-        users.put(studentId, new UserData(studentId, createPassword, firstName, lastName ));
+        users.put(studentId, new UserData(studentId, createPassword, firstName, middleName, lastName ));
         return true;
     }
 
@@ -64,16 +61,41 @@ public class DataStorage
         {
             return false;
         }
-        
-        
+         
         if (!users.containsKey(studentId))
         { 
-                return false;
+            return false;
         }
         
         return (users.get(studentId).Password.equals(createPassword));
     }
 
+    public static boolean ChangeSettings( String firstName, String middleName, String lastName,
+            String oldPassword, String createPassword, String confirmPassword)
+    {
+
+        UserData.currentUser.FirstName = firstName;
+        UserData.currentUser.MiddleName = middleName;
+        UserData.currentUser.LastName = lastName;
+        UserData.currentUser.Password = createPassword;
+        
+        if(firstName.equals("") && middleName.equals("")  &&  lastName.equals("") ||
+           oldPassword.equals(" ")|| createPassword.equals(" ") || confirmPassword.equals(" "))
+        {
+            
+            return false;
+        }
+     
+        if(!createPassword.equals(confirmPassword))
+        {
+            return false;
+        }
+    
+        users.put(UserData.currentUser.ID, new UserData(oldPassword, UserData.currentUser.Password, 
+        UserData.currentUser.FirstName, UserData.currentUser.MiddleName, UserData.currentUser.LastName));
+        return true;
+    }
+    
     public static void SaveData() 
     {
         try
